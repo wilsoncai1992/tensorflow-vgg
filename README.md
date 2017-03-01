@@ -4,19 +4,26 @@ Re-implementation of VGG Network in tensorflow
 # setup
 
 ```
-pip install pyyaml skimage skdata tensorflow-gpu
+conda install pyyaml skimage skdata tensorflow-gpu
+
+conda install anaconda
+pip install skimage
+
+pip install scikit-data
+conda install scikit-data
+conda install skdata
 ```
 
 # training
 
 ```
-python train_model_simple.py experiment.yaml
+ipython2 train_model_simple.py experiment.yaml
 ```
 
 # training on multiple gpus
 
 ```
-python train_model_parallel.py experiment.yaml
+ipython2 train_model_parallel.py experiment.yaml
 ```
 
 # prediction

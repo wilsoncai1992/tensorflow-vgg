@@ -74,7 +74,7 @@ def train(trn_data_generator, vld_data=None):
     # ===================================
     # initialize and run training session
     # ===================================
-    log = tools.MetricsLogger(train_log_fpath)
+    log = tools.StatLogger(train_log_fpath)
     config_proto = tf.ConfigProto(allow_soft_placement=True)
     sess = tf.Session(graph=G, config=config_proto)
     sess.run(init)
