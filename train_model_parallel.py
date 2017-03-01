@@ -54,7 +54,7 @@ def train(train_data_generator):
     checkpoint_iter = config["checkpoint_iter"]
     experiment_dir = config['experiment_dir']
     train_log_fpath = pth.join(experiment_dir, 'train.log')
-    log = tools.MetricsLogger(train_log_fpath)
+    log = tools.StatLogger(train_log_fpath)
 
 
     # =====================
