@@ -76,6 +76,8 @@ def train(trn_data_generator, vld_data=None):
     # ===================================
     log = tools.StatLogger(train_log_fpath)
     config_proto = tf.ConfigProto(allow_soft_placement=True)
+    # WILSON
+    config.gpu_options.allocator_type = 'BFC'
     sess = tf.Session(graph=G, config=config_proto)
     sess.run(init)
     tf.train.start_queue_runners(sess=sess)
